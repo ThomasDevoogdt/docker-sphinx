@@ -68,9 +68,9 @@ RUN python3.6 -m pip install Sphinx \
     sphinxcontrib-seqdiag \
     sphinxcontrib-plantuml \
     sphinxcontrib-exceltable \
-    sphinxcontrib-googleanalytics \
-    sphinxcontrib-googlechart \
-    sphinxcontrib-googlemaps \
+    # sphinxcontrib-googleanalytics \
+    # sphinxcontrib-googlechart \
+    # sphinxcontrib-googlemaps \
     sphinxcontrib-httpdomain
 
 # Stop Java from writing files in documentation source
