@@ -16,6 +16,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     texlive-latex-recommended \
     build-essential \
     wget \
+    latexmk \
   && apt-get autoremove -y \
   && rm -fr /var/cache/* \
   && rm -fr /var/lib/apt/lists/*
@@ -31,9 +32,9 @@ RUN wget -O /opt/plantuml.jar "https://sourceforge.net/projects/plantuml/files/p
 
 # Install Sphinx and extras
 RUN wget -O /tmp/get-pip.py "https://bootstrap.pypa.io/get-pip.py" \
-  && python /tmp/get-pip.py \
+  && python3 /tmp/get-pip.py \
   && rm /tmp/get-pip.py \
-  && pip install Sphinx \
+  && pip3 install Sphinx \
     alabaster \
     sphinx_bootstrap_theme \
     sphinx_rtd_theme \
