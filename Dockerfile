@@ -4,6 +4,7 @@ MAINTAINER Jeremy Nicklas <jeremywnicklas@gmail.com>
 
 # Set up requirements
 RUN export DEBIAN_FRONTEND=noninteractive \
+  && apt-get update && apt-get install -y software-properties-common \
   && add-apt-repository ppa:jonathonf/python-3.6 \
   && apt-get update && apt-get install --yes --no-install-recommends \
     default-jre \
