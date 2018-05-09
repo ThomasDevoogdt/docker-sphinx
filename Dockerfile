@@ -11,6 +11,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     graphviz \
     python3.6 \
     python3-pip \
+    python3.6-dev \
     ghostscript \
     texlive \
     texlive-fonts-recommended \
@@ -48,6 +49,8 @@ RUN wget -O /opt/plantuml.jar "https://sourceforge.net/projects/plantuml/files/p
   && chmod 755 /usr/local/bin/plantuml
 
 # Install Sphinx and extras
+RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade setuptools
 RUN pip3 install Sphinx \
     alabaster \
     sphinx_bootstrap_theme \
