@@ -49,9 +49,9 @@ RUN wget -O /opt/plantuml.jar "https://sourceforge.net/projects/plantuml/files/p
   && chmod 755 /usr/local/bin/plantuml
 
 # Install Sphinx and extras
-RUN pip3.6 install --upgrade pip
-RUN pip3.6 install --upgrade setuptools
-RUN pip3.6 install Sphinx \
+RUN python3.6 -m pip install --upgrade pip
+RUN python3.6 -m pip install --upgrade setuptools
+RUN python3.6 -m pip install Sphinx \
     alabaster \
     sphinx_bootstrap_theme \
     sphinx_rtd_theme \
