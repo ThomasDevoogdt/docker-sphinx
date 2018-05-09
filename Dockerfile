@@ -49,10 +49,10 @@ RUN wget -O /opt/plantuml.jar "https://sourceforge.net/projects/plantuml/files/p
   && chmod 755 /usr/local/bin/plantuml
 
 # Install Sphinx and extras
+RUN apt update && apt install -y python3-distutils
 RUN  wget -O /tmp/get-pip.py "https://bootstrap.pypa.io/get-pip.py" \
   && python3.6 /tmp/get-pip.py \
   && rm /tmp/get-pip.py
-
 RUN python3.6 -m pip install --upgrade pip
 RUN python3.6 -m pip install --upgrade setuptools
 RUN python3.6 -m pip install Sphinx \
